@@ -1,0 +1,14 @@
+Package: ddm
+Title: Generate Lecutre DdM
+Version: 0.0.0.9000
+Authors@R: 
+    person("Jonas", "Tscholl", , "jonas.tscholl@student.uibk.ac.at", role = c("aut", "cre"),
+           comment = c(ORCID = "YOUR-ORCID-ID"))
+Description: What the package does (one paragraph).
+License: `use_gpl_license(version = 3, include_future = TRUE)`
+Imports:
+  quarto,
+  yaml
+Encoding: UTF-8
+Roxygen: list(markdown = TRUE)
+RoxygenNote: 7.2.3

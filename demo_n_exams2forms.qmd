@@ -1,0 +1,24 @@
+---
+title: "DEMO N_EXAMS2FORMs"
+author: "Tscholl Jonas"
+date: "March 4, 2024"
+output:
+  html:
+    
+css: [_extensions/webex.css]
+include-after-body: [_extensions/webex.js]
+---
+
+# Introduction
+
+# R Code Chunk
+
+```{r}
+#| results: asis
+
+
+ddm::n_exams2form("boxplots.Rnw", 3)
+
+```
+
+
