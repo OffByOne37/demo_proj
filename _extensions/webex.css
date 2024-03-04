@@ -17,9 +17,6 @@
   display: block;
 }
 
-.next_question_btn {
-  margin-top: 10px;
-}
 /*---------------------ADDED END--------------------------*/
 
 .webex-check {}
@@ -103,7 +100,7 @@ input.webex-solveme.webex-correct,
     border-radius: 5px;
     margin-bottom: 3em; /*The size of the menu Button is 1em + additional padding. 3em was the best looking one*/
 }
-.webex-solution button, .webex-check-button {
+.webex-solution button, .webex-check-button, .webex-next-question-button {
     height: 2em;
     margin-bottom: 0.5em;
     border-radius: 0.5em;

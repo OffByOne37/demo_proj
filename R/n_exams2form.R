@@ -13,7 +13,7 @@
 n_exams2form <- function(file_path, n) {
   library("exams2webexercises")
   cat("::: {.webex-group}\n")
-  cat("<button class=next_question_btn>Next Question</button>\n")
+  cat("<button class=webex-next-question-button>Next Question</button>\n")
 
   
   for (i in 0:(n-1)) {

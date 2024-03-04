@@ -1,0 +1,855 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.4.545">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="Tscholl Jonas">
+<meta name="dcterms.date" content="2024-03-04">
+
+<title>DEMO N_EXAMS2FORMs</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="demo_n_exams2forms_files/libs/clipboard/clipboard.min.js"></script>
+<script src="demo_n_exams2forms_files/libs/quarto-html/quarto.js"></script>
+<script src="demo_n_exams2forms_files/libs/quarto-html/popper.min.js"></script>
+<script src="demo_n_exams2forms_files/libs/quarto-html/tippy.umd.min.js"></script>
+<script src="demo_n_exams2forms_files/libs/quarto-html/anchor.min.js"></script>
+<link href="demo_n_exams2forms_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="demo_n_exams2forms_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="demo_n_exams2forms_files/libs/bootstrap/bootstrap.min.js"></script>
+<link href="demo_n_exams2forms_files/libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="demo_n_exams2forms_files/libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+
+
+<link rel="stylesheet" href="_extensions/webex.css">
+</head>
+
+<body class="fullcontent">
+
+<div id="quarto-content" class="page-columns page-rows-contents page-layout-article">
+
+<main class="content" id="quarto-document-content">
+
+<header id="title-block-header" class="quarto-title-block default">
+<div class="quarto-title">
+<h1 class="title">DEMO N_EXAMS2FORMs</h1>
+</div>
+
+
+
+<div class="quarto-title-meta">
+
+    <div>
+    <div class="quarto-title-meta-heading">Author</div>
+    <div class="quarto-title-meta-contents">
+             <p>Tscholl Jonas </p>
+          </div>
+  </div>
+    
+    <div>
+    <div class="quarto-title-meta-heading">Published</div>
+    <div class="quarto-title-meta-contents">
+      <p class="date">March 4, 2024</p>
+    </div>
+  </div>
+  
+    
+  </div>
+  
+
+
+</header>
+
+
+<section id="introduction" class="level1">
+<h1>Introduction</h1>
+</section>
+<section id="r-code-chunk" class="level1">
+<h1>R Code Chunk</h1>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>ddm<span class="sc">::</span><span class="fu">n_exams2form</span>(<span class="st">"boxplots.Rnw"</span>, <span class="dv">3</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<pre><code>Lade nötiges Paket: exams</code></pre>
+<div class="webex-group">
+<button class="webex-next-question-button">
+Next Question
+</button>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>In the following figure the distributions of a variable given by two samples (A and B) are represented by parallel boxplots. Which of the following statements are correct? <em>(Comment: The statements are either about correct or clearly wrong.)</em></p>
+<p><img src="data:image/png;base64,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" class="img-fluid"></p>
+<ul>
+<li><select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select> The location of both distributions is about the same.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select> Both distributions contain no outliers.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="">TRUE</option><option value="answer">FALSE</option></select> The spread in sample A is clearly bigger than in B.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select> The skewness of both samples is similar.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="">TRUE</option><option value="answer">FALSE</option></select> Distribution B is about symmetric.</li>
+</ul>
+</div>
+<div class="webex-solution">
+<button>
+Correct solution
+</button>
+<p>True. Both distributions have a similar location. True. Both distributions have no observations which deviate more than 1.5 times the interquartile range from the box. False. The interquartile range in sample A is<br>
+emphnot clearly bigger than in B. True. The skewness of both distributions is similar, both are left-skewed. False. Distribution B is left-skewed.</p>
+<ul>
+<li>True. Both distributions have a similar location.</li>
+<li>True. Both distributions have no observations which deviate more than 1.5 times the interquartile range from the box.</li>
+<li>False. The interquartile range in sample A is<br>
+emphnot clearly bigger than in B.</li>
+<li>True. The skewness of both distributions is similar, both are left-skewed.</li>
+<li>False. Distribution B is left-skewed.</li>
+</ul>
+</div>
+</div>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>In the following figure the distributions of a variable given by two samples (A and B) are represented by parallel boxplots. Which of the following statements are correct? <em>(Comment: The statements are either about correct or clearly wrong.)</em></p>
+<p><img src="data:image/png;base64,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" class="img-fluid"></p>
+<ul>
+<li><select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select> The location of both distributions is about the same.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select> Both distributions contain no outliers.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select> The spread in sample A is clearly bigger than in B.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select> The skewness of both samples is similar.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="">TRUE</option><option value="answer">FALSE</option></select> Distribution B is right-skewed.</li>
+</ul>
+</div>
+<div class="webex-solution">
+<button>
+Correct solution
+</button>
+<p>True. Both distributions have a similar location. True. Both distributions have no observations which deviate more than 1.5 times the interquartile range from the box. True. The interquartile range in sample A is clearly bigger than in B. True. The skewness of both distributions is similar, both are about symmetric. False. Distribution B is about symmetric.</p>
+<ul>
+<li>True. Both distributions have a similar location.</li>
+<li>True. Both distributions have no observations which deviate more than 1.5 times the interquartile range from the box.</li>
+<li>True. The interquartile range in sample A is clearly bigger than in B.</li>
+<li>True. The skewness of both distributions is similar, both are about symmetric.</li>
+<li>False. Distribution B is about symmetric.</li>
+</ul>
+</div>
+</div>
+<div class="webex-question">
+<div class="webex-check webex-box">
+<p>In the following figure the distributions of a variable given by two samples (A and B) are represented by parallel boxplots. Which of the following statements are correct? <em>(Comment: The statements are either about correct or clearly wrong.)</em></p>
+<p><img src="data:image/png;base64,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" class="img-fluid"></p>
+<ul>
+<li><select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select> The location of both distributions is about the same.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="">TRUE</option><option value="answer">FALSE</option></select> Both distributions contain no outliers.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="">TRUE</option><option value="answer">FALSE</option></select> The spread in sample A is clearly bigger than in B.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select> The skewness of both samples is similar.</li>
+<li><select class="webex-select"><option value="blank"></option><option value="answer">TRUE</option><option value="">FALSE</option></select> Distribution A is about symmetric.</li>
+</ul>
+</div>
+<div class="webex-solution">
+<button>
+Correct solution
+</button>
+<p>True. Both distributions have a similar location. False. There are observations which deviate more than 1.5 times the interquartile range from the median. False. The interquartile range in sample A is<br>
+emphnot clearly bigger than in B. True. The skewness of both distributions is similar, both are about symmetric. True. Distribution A is about symmetric.</p>
+<ul>
+<li>True. Both distributions have a similar location.</li>
+<li>False. There are observations which deviate more than 1.5 times the interquartile range from the median.</li>
+<li>False. The interquartile range in sample A is<br>
+emphnot clearly bigger than in B.</li>
+<li>True. The skewness of both distributions is similar, both are about symmetric.</li>
+<li>True. Distribution A is about symmetric.</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+
+</main>
+<!-- /main column -->
+<script>
+
+
+/* update total correct if #webex-total_correct exists */
+update_total_correct = function() {
+  console.log("webex: update total_correct");
+
+  var t = document.getElementsByClassName("webex-total_correct");
+  for (var i = 0; i < t.length; i++) {
+    p = t[i].parentElement;
+    var correct = p.getElementsByClassName("webex-correct").length;
+    var solvemes = p.getElementsByClassName("webex-solveme").length;
+    var radiogroups = p.getElementsByClassName("webex-radiogroup").length;
+    var selects = p.getElementsByClassName("webex-select").length;
+
+    t[i].innerHTML = correct + " of " + (solvemes + radiogroups + selects) + " correct";
+  }
+}
+
+/* webex-solution button toggling function */
+b_func = function() {
+  console.log("webex: toggle hide");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('open')) {
+    cl.remove("open");
+  } else {
+    cl.add("open");
+  }
+}
+
+/* check answers */
+check_func = function() {
+  console.log("webex: check answers");
+
+  var cl = this.parentElement.classList;
+  if (cl.contains('unchecked')) {
+    cl.remove("unchecked");
+    this.innerHTML = "Hide Answers";
+  } else {
+    cl.add("unchecked");
+    this.innerHTML = "Show Answers";
+  }
+}
+
+/* function for checking solveme answers */
+solveme_func = function(e) {
+  console.log("webex: check solveme");
+
+  var real_answers = JSON.parse(this.dataset.answer);
+  var my_answer = this.value;
+  var cl = this.classList;
+  if (cl.contains("ignorecase")) {
+    my_answer = my_answer.toLowerCase();
+  }
+  if (cl.contains("nospaces")) {
+    my_answer = my_answer.replace(/ /g, "")
+  }
+
+  if (my_answer == "") {
+    cl.remove("webex-correct");
+    cl.remove("webex-incorrect");
+  } else if (real_answers.includes(my_answer)) {
+    cl.add("webex-correct");
+    cl.remove("webex-incorrect");
+  } else {
+    cl.add("webex-incorrect");
+    cl.remove("webex-correct");
+  }
+
+  // match numeric answers within a specified tolerance
+  if(this.dataset.tol > 0){
+    var tol = JSON.parse(this.dataset.tol);
+    var matches = real_answers.map(x => Math.abs(x - my_answer) < tol)
+    if (matches.reduce((a, b) => a + b, 0) > 0) {
+      cl.add("webex-correct");
+    } else {
+      cl.remove("webex-correct");
+    }
+  }
+
+  // added regex bit
+  if (cl.contains("regex")){
+    answer_regex = RegExp(real_answers.join("|"))
+    if (answer_regex.test(my_answer)) {
+      cl.add("webex-correct");
+    }
+  }
+
+  update_total_correct();
+}
+
+/* function for checking select answers */
+select_func = function(e) {
+  console.log("webex: check select");
+
+  var cl = this.classList
+
+  /* add style */
+  cl.remove("webex-incorrect");
+  cl.remove("webex-correct");
+  if (this.value == "answer") {
+    cl.add("webex-correct");
+  } else if (this.value != "blank") {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+/* function for checking radiogroups answers */
+radiogroups_func = function(e) {
+  console.log("webex: check radiogroups");
+
+  var checked_button = document.querySelector('input[name=' + this.id + ']:checked');
+  var cl = checked_button.parentElement.classList;
+  var labels = checked_button.parentElement.parentElement.children;
+
+  /* get rid of styles */
+  for (i = 0; i < labels.length; i++) {
+    labels[i].classList.remove("webex-incorrect");
+    labels[i].classList.remove("webex-correct");
+  }
+
+  /* add style */
+  if (checked_button.value == "answer") {
+    cl.add("webex-correct");
+  } else {
+    cl.add("webex-incorrect");
+  }
+
+  update_total_correct();
+}
+
+window.onload = function() {
+  console.log("webex onload");
+  /* set up solution buttons */
+  var buttons = document.getElementsByTagName("button");
+
+  for (var i = 0; i < buttons.length; i++) {
+    if (buttons[i].parentElement.classList.contains('webex-solution')) {
+      buttons[i].onclick = b_func;
+    }
+  }
+
+  var check_sections = document.getElementsByClassName("webex-check");
+  console.log("check:", check_sections.length);
+  for (var i = 0; i < check_sections.length; i++) {
+    check_sections[i].classList.add("unchecked");
+
+    let btn = document.createElement("button");
+    btn.innerHTML = "Show Answers";
+    btn.classList.add("webex-check-button");
+    btn.onclick = check_func;
+    check_sections[i].appendChild(btn);
+
+    let spn = document.createElement("span");
+    spn.classList.add("webex-total_correct");
+    check_sections[i].appendChild(spn);
+  }
+
+  /* set up webex-solveme inputs */
+  var solveme = document.getElementsByClassName("webex-solveme");
+
+  for (var i = 0; i < solveme.length; i++) {
+    /* make sure input boxes don't auto-anything */
+    solveme[i].setAttribute("autocomplete","off");
+    solveme[i].setAttribute("autocorrect", "off");
+    solveme[i].setAttribute("autocapitalize", "off");
+    solveme[i].setAttribute("spellcheck", "false");
+    solveme[i].value = "";
+
+    /* adjust answer for ignorecase or nospaces */
+    var cl = solveme[i].classList;
+    var real_answer = solveme[i].dataset.answer;
+    if (cl.contains("ignorecase")) {
+      real_answer = real_answer.toLowerCase();
+    }
+    if (cl.contains("nospaces")) {
+      real_answer = real_answer.replace(/ /g, "");
+    }
+    solveme[i].dataset.answer = real_answer;
+
+    /* attach checking function */
+    solveme[i].onkeyup = solveme_func;
+    solveme[i].onchange = solveme_func;
+
+    solveme[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+  /* set up radiogroups */
+  var radiogroups = document.getElementsByClassName("webex-radiogroup");
+  for (var i = 0; i < radiogroups.length; i++) {
+    radiogroups[i].onchange = radiogroups_func;
+  }
+
+  /* set up selects */
+  var selects = document.getElementsByClassName("webex-select");
+  for (var i = 0; i < selects.length; i++) {
+    selects[i].onchange = select_func;
+    selects[i].insertAdjacentHTML("afterend", " <span class='webex-icon'></span>")
+  }
+
+
+function handleNextQuestionClick(group, questions) {
+    return async function() {
+        let currentPosition = parseInt(group.dataset.currentPosition);
+        const questionNum = parseInt(group.dataset.questionNum);
+
+        // Hide the current question
+        questions[currentPosition].classList.remove('active');
+        // Move to the next question index
+        currentPosition = (currentPosition + 1) % questionNum;
+        // Display the new question
+        questions[currentPosition].classList.add('active');
+
+        // Update the currentPosition data attribute on the group div
+        group.dataset.currentPosition = currentPosition;
+    };
+}
+
+/*---------------------ADDED-----------------------------*/
+document.querySelectorAll('.webex-group').forEach(group => {
+    const questions = Array.from(group.querySelectorAll('.webex-question'));
+    const questionNum = questions.length;
+
+    let currentPosition = parseInt(group.getAttribute('data-start-position')) || Math.floor(Math.random() * questionNum);
+
+    // Show the default question for each group
+    questions[currentPosition].classList.add("active");
+    console.log(currentPosition + " set active");
+
+    // Store questionNum and currentPosition as data attributes on the group div
+    group.dataset.questionNum = questionNum;
+    group.dataset.currentPosition = currentPosition;
+
+    const nextButton = group.querySelector('.next_question_btn');
+    if (nextButton) {
+        nextButton.addEventListener('click', handleNextQuestionClick(group, questions));
+    } else {
+        console.error("Button not found in group:", group);
+    }
+});
+/*---------------------ADDED  END-----------------------------*/
+
+  update_total_correct();
+}
+
+
+
+</script>
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+    const config = {
+      allowHTML: true,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start',
+    };
+    if (contentFn) {
+      config.content = contentFn;
+    }
+    if (onTriggerFn) {
+      config.onTrigger = onTriggerFn;
+    }
+    if (onUntriggerFn) {
+      config.onUntrigger = onUntriggerFn;
+    }
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+  const xrefs = window.document.querySelectorAll('a.quarto-xref');
+  const processXRef = (id, note) => {
+    // Strip column container classes
+    const stripColumnClz = (el) => {
+      el.classList.remove("page-full", "page-columns");
+      if (el.children) {
+        for (const child of el.children) {
+          stripColumnClz(child);
+        }
+      }
+    }
+    stripColumnClz(note)
+    if (id === null || id.startsWith('sec-')) {
+      // Special case sections, only their first couple elements
+      const container = document.createElement("div");
+      if (note.children && note.children.length > 2) {
+        container.appendChild(note.children[0].cloneNode(true));
+        for (let i = 1; i < note.children.length; i++) {
+          const child = note.children[i];
+          if (child.tagName === "P" && child.innerText === "") {
+            continue;
+          } else {
+            container.appendChild(child.cloneNode(true));
+            break;
+          }
+        }
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(container);
+        }
+        return container.innerHTML
+      } else {
+        if (window.Quarto?.typesetMath) {
+          window.Quarto.typesetMath(note);
+        }
+        return note.innerHTML;
+      }
+    } else {
+      // Remove any anchor links if they are present
+      const anchorLink = note.querySelector('a.anchorjs-link');
+      if (anchorLink) {
+        anchorLink.remove();
+      }
+      if (window.Quarto?.typesetMath) {
+        window.Quarto.typesetMath(note);
+      }
+      // TODO in 1.5, we should make sure this works without a callout special case
+      if (note.classList.contains("callout")) {
+        return note.outerHTML;
+      } else {
+        return note.innerHTML;
+      }
+    }
+  }
+  for (var i=0; i<xrefs.length; i++) {
+    const xref = xrefs[i];
+    tippyHover(xref, undefined, function(instance) {
+      instance.disable();
+      let url = xref.getAttribute('href');
+      let hash = undefined; 
+      if (url.startsWith('#')) {
+        hash = url;
+      } else {
+        try { hash = new URL(url).hash; } catch {}
+      }
+      if (hash) {
+        const id = hash.replace(/^#\/?/, "");
+        const note = window.document.getElementById(id);
+        if (note !== null) {
+          try {
+            const html = processXRef(id, note.cloneNode(true));
+            instance.setContent(html);
+          } finally {
+            instance.enable();
+            instance.show();
+          }
+        } else {
+          // See if we can fetch this
+          fetch(url.split('#')[0])
+          .then(res => res.text())
+          .then(html => {
+            const parser = new DOMParser();
+            const htmlDoc = parser.parseFromString(html, "text/html");
+            const note = htmlDoc.getElementById(id);
+            if (note !== null) {
+              const html = processXRef(id, note);
+              instance.setContent(html);
+            } 
+          }).finally(() => {
+            instance.enable();
+            instance.show();
+          });
+        }
+      } else {
+        // See if we can fetch a full url (with no hash to target)
+        // This is a special case and we should probably do some content thinning / targeting
+        fetch(url)
+        .then(res => res.text())
+        .then(html => {
+          const parser = new DOMParser();
+          const htmlDoc = parser.parseFromString(html, "text/html");
+          const note = htmlDoc.querySelector('main.content');
+          if (note !== null) {
+            // This should only happen for chapter cross references
+            // (since there is no id in the URL)
+            // remove the first header
+            if (note.children.length > 0 && note.children[0].tagName === "HEADER") {
+              note.children[0].remove();
+            }
+            const html = processXRef(null, note);
+            instance.setContent(html);
+          } 
+        }).finally(() => {
+          instance.enable();
+          instance.show();
+        });
+      }
+    }, function(instance) {
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            div.style.left = 0;
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+        // Handle positioning of the toggle
+    window.addEventListener(
+      "resize",
+      throttle(() => {
+        elRect = undefined;
+        if (selectedAnnoteEl) {
+          selectCodeLines(selectedAnnoteEl);
+        }
+      }, 10)
+    );
+    function throttle(fn, ms) {
+    let throttle = false;
+    let timer;
+      return (...args) => {
+        if(!throttle) { // first call gets through
+            fn.apply(this, args);
+            throttle = true;
+        } else { // all the others get throttled
+            if(timer) clearTimeout(timer); // cancel #2
+            timer = setTimeout(() => {
+              fn.apply(this, args);
+              timer = throttle = false;
+            }, ms);
+        }
+      };
+    }
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+
+</body></html>
